@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+	<persistence-unit name="orders-pu" transaction-type="JTA">
+
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.javeriana.aes.pica.servicios.ordenes.entity.Item</class>
+		<class>com.javeriana.aes.pica.servicios.ordenes.entity.Orden</class>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+		<properties>
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/touresbalon" />
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="adminadmin" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.cache.use_query_cache" value="false" />
+			<property name="hibernate.transaction.flush_before_completion"	value="true" />
+			<property name="connection.pool_size" value="20" />
+		</properties>
+	</persistence-unit>
+</persistence>

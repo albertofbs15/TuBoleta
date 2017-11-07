@@ -1,0 +1,363 @@
+POST: http://{host}:{port}/ordenes/consultarOrdenes/
+
+[{"key":"Content-Type","value":"application/json","description":""}]
+
+Request: 
+
+{
+	
+	"clienteNumeroDocumento":"1111",
+	"clienteTipoDocumento":"CC"
+	
+}
+
+Response:
+
+{
+    "productos": [
+        {
+            "items": [
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                }
+            ],
+            "fechaOrden": null,
+            "precio": null,
+            "estado": null,
+            "comentario": null,
+            "numeroDocumentoCliente": null,
+            "tipoDocumentoCliente": null
+        },
+        {
+            "items": [
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                }
+            ],
+            "fechaOrden": null,
+            "precio": null,
+            "estado": null,
+            "comentario": null,
+            "numeroDocumentoCliente": null,
+            "tipoDocumentoCliente": null
+        },
+        {
+            "items": [
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                }
+            ],
+            "fechaOrden": null,
+            "precio": null,
+            "estado": null,
+            "comentario": null,
+            "numeroDocumentoCliente": null,
+            "tipoDocumentoCliente": null
+        },
+        {
+            "items": [
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                },
+                {
+                    "id": null,
+                    "producto": {
+                        "id": null,
+                        "nombre": null
+                    },
+                    "numParte": null,
+                    "precio": null,
+                    "cantidad": null
+                }
+            ],
+            "fechaOrden": null,
+            "precio": null,
+            "estado": null,
+            "comentario": null,
+            "numeroDocumentoCliente": null,
+            "tipoDocumentoCliente": null
+        }
+    ],
+    "estado": 200,
+    "resultado": false
+}
+
+
+
+	   
+POST: http://192.168.1.57:8080/ordenes/crearOrdenes/	   
+	  
+
+[{"key":"Content-Type","value":"application/json","description":""}]	  
+	  
+request:
+
+
+{
+	"items": [
+		{
+			"id": null,
+			"producto": {
+				"id": null,
+				"nombre": null
+			},
+			"numParte": null,
+			"precio": null,
+			"cantidad": null
+		},
+		{
+			"id": null,
+			"producto": {
+				"id": null,
+				"nombre": null
+			},
+			"numParte": null,
+			"precio": null,
+			"cantidad": null
+		},
+		{
+			"id": null,
+			"producto": {
+				"id": null,
+				"nombre": null
+			},
+			"numParte": null,
+			"precio": null,
+			"cantidad": null
+		},
+		{
+			"id": null,
+			"producto": {
+				"id": null,
+				"nombre": null
+			},
+			"numParte": null,
+			"precio": null,
+			"cantidad": null
+		},
+		{
+			"id": null,
+			"producto": {
+				"id": null,
+				"nombre": null
+			},
+			"numParte": null,
+			"precio": null,
+			"cantidad": null
+		}
+	],
+	"fechaOrden": null,
+	"precio": null,
+	"estado": null,
+	"comentario": null,
+	"numeroDocumentoCliente": null,
+	"tipoDocumentoCliente": null
+}
+
+
+response:		
+	   
+{
+
+    "estado": 200,
+    "resultado": true
+}
+
+
+PUT: http://{host}:{port}/ordenes/cancelarOrdenes/
+
+[{"key":"Content-Type","value":"application/json","description":""}]	
+
+request:
+
+{
+	
+	"idOrden":"1111"
+	
+}
+
+response:		
+	   
+{
+
+    "estado": 200,
+    "resultado": true
+}
