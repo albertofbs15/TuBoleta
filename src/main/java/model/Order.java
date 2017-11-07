@@ -1,6 +1,7 @@
 package model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -32,7 +33,7 @@ public class Order implements Serializable {
     @Column(name = "USERID")
     private int userId;
     @OneToMany(mappedBy = "order")
-    private List<OrderItem> orderItem;
+    private List<OrderItem> orderItem = new ArrayList<>();
 
     public Integer getId() {
         return id;

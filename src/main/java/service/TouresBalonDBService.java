@@ -43,8 +43,14 @@ public class TouresBalonDBService implements TouresBalonService {
     @Override
     public boolean updateOrderStatus(UpdateOrderStatus updateOrderStatus) {
         Order order = entityManager.find(Order.class, updateOrderStatus.getOrderId());
+        if (order == null ) {
+            System.out.println("ORDER WITH ID " + updateOrderStatus.getOrderId() + " WAS NOT FOUND");
+            return false;
+        }
+
         order.setStatus(updateOrderStatus.getStatus());
         entityManager.persist(order);
         return true;
+
     }
 }
