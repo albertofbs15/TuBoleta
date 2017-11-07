@@ -1,8 +1,5 @@
 package service;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement
 public  class Item {
     private int productId;
     private String productName;

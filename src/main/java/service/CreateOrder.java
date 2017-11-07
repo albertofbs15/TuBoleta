@@ -1,14 +1,12 @@
 package service;
 
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by AHernandezS on 4/11/2017.
  */
-@XmlRootElement
-public class CreateOrder implements Serializable{
+public class CreateOrder implements Serializable {
     private int price;
     private int userId;
     List<Item> items;

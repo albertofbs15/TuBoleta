@@ -1,11 +1,6 @@
 package service;
 
 import model.Order;
-import service.CreateOrder;
-import service.Item;
-import service.ResponseCreateOrder;
-import service.TouresBalonService;
-import service.UpdateOrderStatus;
 
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;

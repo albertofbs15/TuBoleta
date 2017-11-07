@@ -10,12 +10,12 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 @WebService(targetNamespace = "http://com.javeriana.aes.pica/services/orders")
-public class OrdersService {
+public class SoapOrderService {
 	
     @EJB
     private TouresBalonService touresBalonService;
 
-    public OrdersService() {
+    public SoapOrderService() {
 		super();
 	}
 
@@ -39,7 +39,7 @@ public class OrdersService {
 		System.out.println("handleUpdateOrderStatus");
 		updateOrderStatus.setOrderId(orderId);
 		boolean response = touresBalonService.updateOrderStatus(updateOrderStatus);
-		return response;
+		return  response;
 	}
 	 
 }
