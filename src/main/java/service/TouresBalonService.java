@@ -5,7 +5,7 @@ package service;
  */
 public interface TouresBalonService {
 
-    ResponseCreateOrder createOrder(CreateOrder requestCreateOrder);
+    ResponseCreateOrder createOrder(CreateOrderRequest requestCreateOrder);
 
     boolean updateOrderStatus(UpdateOrderStatus requestUpdateOrderStatus);
 

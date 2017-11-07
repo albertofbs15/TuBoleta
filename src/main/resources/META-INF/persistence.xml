@@ -6,8 +6,8 @@
 	<persistence-unit name="orders-pu" transaction-type="JTA">
 
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<class>com.javeriana.aes.pica.servicios.ordenes.entity.Item</class>
-		<class>com.javeriana.aes.pica.servicios.ordenes.entity.Orden</class>
+		<class>model.Order</class>
+		<class>model.OrderItem</class>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 
 		<properties>

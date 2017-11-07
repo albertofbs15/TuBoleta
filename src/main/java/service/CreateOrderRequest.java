@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by AHernandezS on 4/11/2017.
  */
-public class CreateOrder implements Serializable {
+public class CreateOrderRequest implements Serializable {
     private int price;
     private int userId;
     List<Item> items;

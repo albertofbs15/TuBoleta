@@ -17,7 +17,7 @@ public class TouresBalonDBService implements TouresBalonService {
     private EntityManager entityManager;
 
     @Override
-    public ResponseCreateOrder createOrder(CreateOrder createOrder) {
+    public ResponseCreateOrder createOrder(CreateOrderRequest createOrder) {
         System.out.println("Hibernate one to many (XML Mapping)");
 
         Order order = new Order();

@@ -1,6 +1,6 @@
 package SoapDirective;
 
-import service.CreateOrder;
+import service.CreateOrderRequest;
 import service.ResponseCreateOrder;
 import service.TouresBalonService;
 import service.UpdateOrderStatus;
@@ -20,7 +20,7 @@ public class SoapOrderService {
 	}
 
 	@WebMethod(operationName = "createOrder", action = "createOrder")
-	public ResponseCreateOrder createOrder(CreateOrder createOrder)  {
+	public ResponseCreateOrder createOrder(CreateOrderRequest createOrder)  {
 		return handleCreateOrder(createOrder);
 	}
 
@@ -29,7 +29,7 @@ public class SoapOrderService {
 		return handleUpdateOrderStatus(idOrden, updateOrderStatus);
 	}
 
-	private ResponseCreateOrder handleCreateOrder(CreateOrder createOrder) {
+	private ResponseCreateOrder handleCreateOrder(CreateOrderRequest createOrder) {
 		System.out.println("handleCreateOrder");
 		ResponseCreateOrder response = touresBalonService.createOrder(createOrder);
 		return response;
