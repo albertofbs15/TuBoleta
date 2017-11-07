@@ -29,7 +29,7 @@ public class Order implements Serializable {
     private int price;
     @Column(name = "STATUS")
     private String status;
-    @Column(name = "CUSTOMER_ID")
+    @Column(name = "USERID")
     private int userId;
     @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItem;

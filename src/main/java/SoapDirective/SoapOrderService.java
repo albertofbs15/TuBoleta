@@ -25,8 +25,8 @@ public class SoapOrderService {
 	}
 
 	@WebMethod(operationName = "updateOrder", action = "updateOrder")
-	public Boolean updateOrder(int idOrden, UpdateOrderStatus updateOrderStatus)  {
-		return handleUpdateOrderStatus(idOrden, updateOrderStatus);
+	public Boolean updateOrder(UpdateOrderStatus updateOrderStatus)  {
+		return handleUpdateOrderStatus(updateOrderStatus);
 	}
 
 	private ResponseCreateOrder handleCreateOrder(CreateOrderRequest createOrder) {
@@ -35,11 +35,9 @@ public class SoapOrderService {
 		return response;
 	}
 
-	private Boolean handleUpdateOrderStatus(int orderId, UpdateOrderStatus updateOrderStatus) {
+	private Boolean handleUpdateOrderStatus(UpdateOrderStatus updateOrderStatus) {
 		System.out.println("handleUpdateOrderStatus");
-		updateOrderStatus.setOrderId(orderId);
-		boolean response = touresBalonService.updateOrderStatus(updateOrderStatus);
-		return  response;
+		return  touresBalonService.updateOrderStatus(updateOrderStatus);
 	}
 	 
 }
