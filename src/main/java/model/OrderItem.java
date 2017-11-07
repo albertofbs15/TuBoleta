@@ -17,9 +17,6 @@ import javax.persistence.Entity;
 @Entity
 @Table(name = "ORDER_ITEM")
 public class OrderItem implements Serializable {
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
