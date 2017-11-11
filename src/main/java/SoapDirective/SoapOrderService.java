@@ -1,6 +1,8 @@
 package SoapDirective;
 
+import model.Product;
 import service.CreateOrderRequest;
+import service.OrderInfoForApprobation;
 import service.ResponseCreateOrder;
 import service.TouresBalonService;
 import service.UpdateOrderStatus;
@@ -9,6 +11,7 @@ import service.ClientStatus;
 import javax.ejb.EJB;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import java.util.Random;
 
 @WebService(targetNamespace = "http://com.javeriana.aes.pica/services/orders")
 public class SoapOrderService {
@@ -20,8 +23,10 @@ public class SoapOrderService {
 	final  String DORADO = "DORADO";
 	final  String PLEATEADO = "PLATEADO";
 	final int MONTO = 20000;
+	private Random random = new Random();
 
-    public SoapOrderService() {
+
+	public SoapOrderService() {
 		super();
 	}
 
@@ -40,6 +45,46 @@ public class SoapOrderService {
 		return handleValidateClientStatus(clientStatus);
 	}
 
+	@WebMethod(operationName = "manualOrderValidation", action = "manualOrderValidation")
+	public Boolean manualApprobation(OrderInfoForApprobation orderInfoForApprobation)  {
+		boolean manualApprobation = random.nextBoolean();
+		System.out.println("MANUAL APPROBATION:" + manualApprobation);
+		return manualApprobation;
+	}
+
+	@WebMethod(operationName = "getProductById", action = "getProductById")
+	public Product getProductById(int productId)  {
+		return touresBalonService.getProductById(productId);
+	}
+
+	@WebMethod(operationName = "requestTransport", action = "requestTransport")
+	public int requestTransport(int transportId)  {
+		int cualquiera = random.nextInt();
+		System.out.println("REQUEST TRASNPORT " + cualquiera);
+		return random.nextInt();
+	}
+
+	@WebMethod(operationName = "requestHotel", action = "requestHotel")
+	public int requestHotel(int hotelId)  {
+		int cualquiera = random.nextInt();
+		System.out.println("REQUEST HOTEL" + cualquiera);
+		return random.nextInt();
+	}
+
+	@WebMethod(operationName = "requestEvent", action = "requestEvent")
+	public int requestEvent(int eventId)  {
+		int cualquiera = random.nextInt();
+		System.out.println("REQUEST EVENT " + cualquiera);
+		return random.nextInt();
+	}
+
+	@WebMethod(operationName = "payProduct", action = "payProduct")
+	public int payProduct(int orderId)  {
+		int cualquiera = random.nextInt();
+		System.out.println("PAY ORDER" + cualquiera);
+		return random.nextInt();
+	}
+
 	private ResponseCreateOrder handleCreateOrder(CreateOrderRequest createOrder) {
 		System.out.println("handleCreateOrder");
 		ResponseCreateOrder response = touresBalonService.createOrder(createOrder);
@@ -53,13 +98,15 @@ public class SoapOrderService {
 
 	private Boolean handleValidateClientStatus(ClientStatus clientStatus) {
 		System.out.println("handleValidateClientStatus");
-		if (clientStatus.getTipoCliente().equals(PLATINO)) {
-			return true;
-		} else if (clientStatus.getTipoCliente().equals(DORADO) && clientStatus.getMonto() <= MONTO) {
-			return true;
+		boolean result = false;
+		if (PLATINO.equals(clientStatus.getTipoCliente())) {
+			result = true;
+		} else if (DORADO.equals(clientStatus.getTipoCliente()) && clientStatus.getMonto() <= MONTO) {
+			result = true;
 		}
 
-		return false;
+		System.out.println("ESTADO DE APROBACION: " + result );
+		return result;
 	}
 	 
 }

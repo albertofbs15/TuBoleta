@@ -1,6 +1,7 @@
 package service;
 
 import model.Order;
+import model.Product;
 
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;
@@ -52,5 +53,10 @@ public class TouresBalonDBService implements TouresBalonService {
         entityManager.persist(order);
         return true;
 
+    }
+
+    @Override
+    public Product getProductById(int productId) {
+        return entityManager.find(Product.class, productId);
     }
 }
