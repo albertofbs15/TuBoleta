@@ -1,39 +1,58 @@
 package service;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
-import java.util.List;
+import java.util.Date;
 
 /**
- * Created by AHernandezS on 4/11/2017.
+ * Created by AHernandezS on 13/11/2017.
  */
-public class CreateOrderRequest implements Serializable {
-    private int price;
-    private int userId;
-    List<Item> items;
+@XmlRootElement
+public class CreateOrderRequest implements Serializable{
 
-    public int getPrice() {
-        return price;
+    private int id;
+    private Date arrivalDate;
+    private Date departureDate;
+    private int sourceCity;
+    private int targetCity;
+
+    public int getId() {
+        return id;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getUserId() {
-        return userId;
+    public Date getArrivalDate() {
+        return arrivalDate;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setArrivalDate(Date arrivalDate) {
+        this.arrivalDate = arrivalDate;
     }
 
-    public List<Item> getItems() {
-        return items;
+    public Date getDepartureDate() {
+        return departureDate;
     }
 
-    public void setItems(List<Item> items) {
-        this.items = items;
+    public void setDepartureDate(Date departureDate) {
+        this.departureDate = departureDate;
     }
 
+    public int getSourceCity() {
+        return sourceCity;
+    }
 
+    public void setSourceCity(int sourceCity) {
+        this.sourceCity = sourceCity;
+    }
+
+    public int getTargetCity() {
+        return targetCity;
+    }
+
+    public void setTargetCity(int targetCity) {
+        this.targetCity = targetCity;
+    }
 }
