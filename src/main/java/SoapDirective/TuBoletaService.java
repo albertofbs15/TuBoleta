@@ -5,8 +5,8 @@ import service.CreateOrderRequest;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 
-@WebService(targetNamespace = "http://com.javeriana.aes.pica/services/orders")
-public class AAFlightsService {
+@WebService(targetNamespace = "http://com.javeriana.aes.pica/tuboleta/orders")
+public class TuBoletaService {
 
 	private static int order = 0;
 

@@ -11,9 +11,7 @@ import java.util.Date;
 public class CreateOrderRequest implements Serializable{
 
     private int id;
-    private Date arrivalDate;
-    private Date departureDate;
-    private int sourceCity;
+    private Date spectacleDate;
     private int targetCity;
 
     public int getId() {
@@ -24,28 +22,12 @@ public class CreateOrderRequest implements Serializable{
         this.id = id;
     }
 
-    public Date getArrivalDate() {
-        return arrivalDate;
+    public Date getSpectacleDate() {
+        return spectacleDate;
     }
 
-    public void setArrivalDate(Date arrivalDate) {
-        this.arrivalDate = arrivalDate;
-    }
-
-    public Date getDepartureDate() {
-        return departureDate;
-    }
-
-    public void setDepartureDate(Date departureDate) {
-        this.departureDate = departureDate;
-    }
-
-    public int getSourceCity() {
-        return sourceCity;
-    }
-
-    public void setSourceCity(int sourceCity) {
-        this.sourceCity = sourceCity;
+    public void setSpectacleDate(Date spectacleDate) {
+        this.spectacleDate = spectacleDate;
     }
 
     public int getTargetCity() {
