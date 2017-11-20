@@ -12,6 +12,7 @@ public class TuBoletaService {
 
 	@WebMethod(operationName = "createOrder", action = "createOrder")
 	public int createOrder(CreateOrderRequest createOrderRequest)  {
+		System.out.println("CREATE ORDER REQUEST TU BOLETA");
 		return order++;
 	}
 
